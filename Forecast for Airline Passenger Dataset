@@ -1,0 +1,21 @@
+* loaded the dataset for Airlines passengers
+* There were 96 observations and 2 features
+* The dataset has count of airline passengers for every month from 1995 to 2002
+* Created t, t_square, log_passengers columns in the dataset
+* Created month, year, dummy variables for each month columns in the dataset from the date column.
+* Divided the data into train and test data
+* Trained the various models on train data and calculated RMSE values for the test data.
+
+    Model                     RMSE Values
+    rmse_Mult_add_sea               11.78
+    rmse_linear                     36.02
+    rmse_add_sea_quad               39.76
+    rmse_Quad                       58.49
+    rmse_add_sea                   132.25
+    rmse_Mult_sea                  137.61
+    rmse_Exp                       298.66
+
+* Selected 'rmse_Mult_add_sea' model for predicting passenger count as it has the lowest RMSE Value.
+* Then created 'new_data' dataset from the original dataset for which we need to forecast Airline's passenger count using the 'rmse_Mult_add_sea' model 
+* Deleted passengers, log passengers column as we need to forecast these values.
+* Predicted the passenger count using the best model and plotted graph for the forecasted passengers.
